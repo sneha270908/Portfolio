@@ -328,8 +328,6 @@ nav a{
 .proj{
     width: 100%;   /* instead of 350px */
 }
-<<<<<<< HEAD
-=======
 /* ===== PROJECT PREVIEW CARDS ===== */
 .proj-card {
     width: 100%;
@@ -643,4 +641,3 @@ nav a{
     margin-bottom: 10px;
     display: block;
 }
->>>>>>> 11e0509 (final commit)
