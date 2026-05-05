@@ -328,3 +328,319 @@ nav a{
 .proj{
     width: 100%;   /* instead of 350px */
 }
+<<<<<<< HEAD
+=======
+/* ===== PROJECT PREVIEW CARDS ===== */
+.proj-card {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.proj-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    border-color: #ffbf00;
+}
+.proj-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Browser-style topbar */
+.prev-topbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: #2e2e2e;
+    border-bottom: 1px solid #3a3a3a;
+}
+.dark-bar { background: #1a1a2e; border-color: #2a2a3e; }
+.medicare-bar { background: #e8f4fd; border-color: #c9e6f7; }
+.prev-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+}
+.prev-dot.r { background: #ff5f57; }
+.prev-dot.y { background: #febc2e; }
+.prev-dot.g { background: #28c840; }
+.prev-title {
+    margin-left: 8px;
+    font-size: 0.7rem;
+    color: #a0a0a0;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+/* ---- EXPENSE TRACKER PREVIEW ---- */
+.expense-preview { background: #0a0a0f; }
+.expense-body {
+    display: flex;
+    height: 150px;
+    overflow: hidden;
+}
+.prev-sidebar {
+    width: 90px;
+    background: #111118;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-right: 1px solid #2a2a38;
+    flex-shrink: 0;
+}
+.prev-nav-item {
+    font-size: 0.55rem;
+    color: #606078;
+    padding: 4px 6px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.active-nav {
+    background: rgba(124,109,250,0.15);
+    color: #a594ff;
+}
+.prev-content {
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+.prev-stats {
+    display: flex;
+    gap: 5px;
+}
+.prev-stat {
+    flex: 1;
+    background: #1c1c26;
+    border: 1px solid #2a2a38;
+    border-radius: 6px;
+    padding: 5px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.prev-stat span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--sc, #7c6dfa);
+}
+.prev-stat small {
+    font-size: 0.45rem;
+    color: #606078;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.prev-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 50px;
+    padding: 4px 6px;
+    background: #1c1c26;
+    border: 1px solid #2a2a38;
+    border-radius: 6px;
+}
+.prev-bar {
+    flex: 1;
+    border-radius: 3px 3px 0 0;
+    opacity: 0.85;
+}
+
+/* ---- RESUME BUILDER PREVIEW ---- */
+.resume-preview { background: #0f172a; }
+.resume-body {
+    display: flex;
+    height: 150px;
+    overflow: hidden;
+    gap: 8px;
+    padding: 10px;
+    background: #0f172a;
+}
+.prev-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.prev-input-row {
+    display: flex;
+    gap: 4px;
+}
+.prev-input {
+    flex: 1;
+    height: 16px;
+    background: #1e293b;
+    border-radius: 4px;
+    border: 1px solid #334155;
+}
+.prev-input.full { width: 100%; flex: none; }
+.prev-btn {
+    margin-top: 4px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: white;
+    font-size: 0.55rem;
+    font-weight: 600;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+.prev-resume-sheet {
+    width: 80px;
+    background: white;
+    border-radius: 4px;
+    padding: 8px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+}
+.prev-resume-name {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 3px;
+    width: 70%;
+    margin-bottom: 3px;
+}
+.prev-resume-line {
+    height: 5px;
+    background: #e2e8f0;
+    border-radius: 2px;
+}
+.prev-resume-line.short { width: 60%; }
+
+/* ---- MEDICARE PREVIEW ---- */
+.medicare-preview { background: #e8f4fd; }
+.medicare-body {
+    height: 150px;
+    overflow: hidden;
+    padding: 12px;
+    background: linear-gradient(135deg, #e8f4fd 0%, #c9e6f7 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.medicare-hero-prev {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.mh-badge {
+    display: inline-block;
+    background: rgba(33,150,196,0.12);
+    color: #2196C4;
+    border: 1px solid rgba(33,150,196,0.25);
+    border-radius: 50px;
+    font-size: 0.5rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    width: fit-content;
+}
+.mh-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1565A0;
+    line-height: 1.2;
+}
+.mh-title em {
+    color: #2196C4;
+    font-style: italic;
+}
+.mh-btn {
+    background: #2196C4;
+    color: white;
+    font-size: 0.5rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 50px;
+    width: fit-content;
+}
+.medicare-cards-prev {
+    display: flex;
+    gap: 5px;
+}
+.mcard {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    font-size: 0.5rem;
+    border: 1px solid rgba(33,150,196,0.15);
+    box-shadow: 0 2px 8px rgba(21,101,160,0.08);
+}
+.mcard span { font-size: 0.75rem; }
+.mcard b { font-size: 0.65rem; color: #1565A0; }
+.mcard small { color: #5B82A0; font-size: 0.42rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.accent-mcard { background: #2196C4; border-color: #2196C4; }
+.accent-mcard b, .accent-mcard small { color: white !important; }
+
+/* Fix proj grid to 1 col so cards stack nicely full width */
+.proj {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* ===== CATEGORIZED SKILLS ===== */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.skill-category {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.skill-cat-label {
+    min-width: 90px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffbf00;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-top: 22px;
+    flex-shrink: 0;
+}
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex: 1;
+}
+.skill-items .item {
+    padding: 14px 16px;
+    min-width: 90px;
+    flex: 0 0 auto;
+}
+.skill-items .item img {
+    height: 36px;
+    width: 36px;
+    margin-bottom: 10px;
+}
+.skill-items .item h3 {
+    font-size: 0.75rem;
+}
+.core-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.core-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    display: block;
+}
+>>>>>>> 11e0509 (final commit)
